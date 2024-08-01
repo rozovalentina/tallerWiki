@@ -22,7 +22,7 @@ public class ContactForm {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
-    private Integer id;
+    private Integer id_contacto;
     private String name;
     private String surnames;
     private String email;
