@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+/* body{
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    box-sizing: border-box;
+    min-height: 50vh;
+    
+} */
+.container{
+    margin-right:auto;
+    margin-left:auto;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    min-height: 50vh;
+    max-width: 400px;
+    width: 400px;
+    padding: 25px 40px 10px 40px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    background-color: #ffffff;
+}
+h1{
+    font-weight: 600;
+    text-align: center;
+}
+.container form .formRow{
+    display: flex;
+    margin: 32px 0;
+}
+form .formRow{
+    width: 100%;
+    margin-right: 50px 0;
+}
+form .formRow .inputData {
+    height: 60px;
+    margin: 0 15px;
+    position: relative;
+}
+
+.buttonsDiv{
+    height: 40px;
+}
+
+.buttons{
+    border-radius: 8px;
+    font-size: 16px;
+    border: 1px solid rgba(27, 31, 35, 0.15);
+    box-shadow: rgba(27, 31, 35, 0.04) 0 1px 0, rgba(255, 255, 255, 0.25) 0 1px 0 inset;
+    margin-left: 20px;
+    line-height: 20px;
+    touch-action: manipulation;
+    list-style: none;
+    padding: 10px 12px;
+    background-color: rgb(238, 236, 236);
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.buttons:hover{
+    background-color: #F3F4F6;
+    text-decoration: none;
+    transition-duration: 0.1s;
+}
+
+.inputData input, #description{
+    display: block;
+    border: none;
+    margin-top: 5px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.12);
+}
+input:focus, #description:focus{
+    outline: none;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.562);
+}
+
+.return{
+    float: right;
+    color: #3498db;
+    text-decoration: none;
+}
+.return:hover{
+    text-decoration: underline;
+}
+
+.error-message{
+    color: rgb(212, 0, 0);
+    font-size: 12px;
+    display: none;
+}
+
+#description{
+    resize: none;
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Wiki del Equipo</title>
+    <link rel="stylesheet" href="/css/contact.css">
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header>
+        <h1>Wiki Equipo (Nombre)</h1>
+    </header>
+    <nav>
+        <div class="menu-container">
+            <button class="menu-button">Menú
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-menu">
+                <a href="#">Descripción del Proyecto</a>
+                <a href="#">Requerimientos</a>
+                <a href="#">Arquitectura</a>
+                <a href="#">Modelos</a>
+                <a href="#">Desarrollo</a>
+                <a href="#">Pruebas</a>
+                <a href="#">Despliegue</a>
+            </div>
+        </div>
+        <div class="nav-element">
+            <a href="@{/requerimientos}" >Portada</a>
+        </div>
+        <div class="nav-element" id="nav-selected">
+            <a href="@{/arquitectura}">Contáctenos</a>
+        </div>
+    </nav>
+    
+    <main>
+    <!-- <section> -->
+    <div class="container">
+    <h1>Formulario de contacto</h1>
+    <!-- onsubmit="checkForm(event)" -->
+    <!-- th:action="@{/controllers/send-contact}" -->
+    <form  id="contactForm" action="/controllers/contact" th:object="${contactForm}" method="post">
+
+        <div class="formRow">
+            <div class="inputData">
+                <label for="name">Nombre (
+                    <span id="namesLength"></span>/
+                    <span id="maxNamesLength"></span>):
+                </label>
+                <input type="text" id="name" th:field="*{name}" placeholder="Ingrese su nombre" onblur="checkNames()" oninput="checkNames()" required>
+                <span class="error-message" id="nameError"></span>
+            </div>
+            <div class="inputData">
+                <label for="name">Apellidos (
+                    <span id="surnamesLength"></span>/
+                    <span id="maxSurnamesLength"></span>):
+                </label>
+                <input type="text" id="surnames" th:field="*{surnames}" placeholder="Ingrese sus apellidos" onkeyup="checkSurnames()" onblur="checkSurnames()" required>
+                <span class="error-message" id="surnamesError"></span>
+            </div>
+        </div>
+
+        <div class="formRow">
+            <div class="inputData">
+                <label for="name">Correo (
+                    <span id="emailLength"></span>/
+                    <span id="maxEmailLength"></span>):
+                </label>
+                <input type="text" id="email" th:field="*{email}" onkeyup="checkEmail()" onblur="checkEmail()" required>
+                <span class="error-message" id="emailError"></span>
+            </div>
+            <div class="inputData">
+                <label for="surnames">Semestre:</label>
+                <input type="text" id="semester" th:field="*{semester}" onkeyup="checkSemester()" onblur="checkSemester()" required>
+                <span class="error-message" id="semesterError"></span>
+            </div>
+        </div>
+
+        <div class="formRow">
+            <div class="inputData">
+                <label for="description">Descripción</label>
+                <textarea id="description" th:field="*{description}" cols="50" rows="3" onkeyup="checkDescription()" onblur="checkDescription()" required></textarea>
+                <!-- <input type="text" id="description" onkeyup="checkDescription()" onblur="checkDescription()" required> -->
+                <span class="error-message" id="descriptionError"></span>
+            </div>
+        </div>
+
+        <div class="formRow">
+            <div class="buttonsDiv">
+                <input type="submit" id="submitBtn" class="buttons">
+            </div>
+            <div class="buttonsDiv">
+                <input type="reset" id="resetBtn" class="buttons">
+            </div>
+        </div>
+    </form>
+    </div>   
+    <!-- </section> -->
+        
+    </main>
+    <footer>
+        <p>Wiki del Equipo - Desarrollo Web 2430</p>
+    </footer>
+    <script src="/js/contact.js"></script>
+</body>
+</html>
