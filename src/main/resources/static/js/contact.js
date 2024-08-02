@@ -153,7 +153,7 @@ function isEmpty(text){
  */
 function checkForm(event) {
     event.preventDefault();
-    if (checkEmail() && checkNames() && checkSurnames() && checkSemester()) {
+    if (checkEmail() && checkNames() && checkSurnames() && checkSemester() && checkDescription()) {
         alert(`Formulario correcto, datos ingresados:\n
             Nombre: ${names.value}\n
             Apellidos: ${surnames.value}\n

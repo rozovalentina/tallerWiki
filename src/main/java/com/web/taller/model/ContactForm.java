@@ -17,12 +17,12 @@ import lombok.ToString;
 @Getter
 @Setter
 @ToString
-@Table(name = "contacto")
+@Table(name = "contact")
 public class ContactForm {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
-    private Integer id_contacto;
+    private Integer id_contact;
     private String name;
     private String surnames;
     private String email;

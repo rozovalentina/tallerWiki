@@ -66,13 +66,19 @@ form .formRow .inputData {
     transition-duration: 0.1s;
 }
 
+.buttons:active{
+    background-color: #F3F4F6;
+    transform: scale(0.98);
+    opacity: 0.8;
+}
+
 .inputData input, #description{
     display: block;
     border: none;
     margin-top: 5px;
     border-bottom: 2px solid rgba(0, 0, 0, 0.12);
 }
-input:focus, #description:focus{
+input:not(.buttons):focus, #description:focus{
     outline: none;
     border-bottom: 2px solid rgba(0, 0, 0, 0.562);
 }

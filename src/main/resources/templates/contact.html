@@ -4,8 +4,8 @@
     <title>Wiki del Equipo</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/contact.css">
     <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/contact.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
@@ -41,21 +41,17 @@
     <h1>Formulario de contacto</h1>
     <!-- onsubmit="checkForm(event)" -->
     <!-- th:action="@{/controllers/send-contact}" -->
-    <form  id="contactForm" action="/controllers/contact" th:object="${contactForm}" method="post">
+    <form  id="contactForm" action="/controllers/contact" th:object="${contactForm}" method="post" onsubmit="checkForm(event)">
 
         <div class="formRow">
             <div class="inputData">
-                <label for="name">Nombre (
-                    <span id="namesLength"></span>/
-                    <span id="maxNamesLength"></span>):
+                <label for="name">Nombre (<span id="namesLength"></span>/<span id="maxNamesLength"></span>):
                 </label>
                 <input type="text" id="name" th:field="*{name}" placeholder="Ingrese su nombre" onblur="checkNames()" oninput="checkNames()" required>
                 <span class="error-message" id="nameError"></span>
             </div>
             <div class="inputData">
-                <label for="name">Apellidos (
-                    <span id="surnamesLength"></span>/
-                    <span id="maxSurnamesLength"></span>):
+                <label for="name">Apellidos (<span id="surnamesLength"></span>/<span id="maxSurnamesLength"></span>):
                 </label>
                 <input type="text" id="surnames" th:field="*{surnames}" placeholder="Ingrese sus apellidos" onkeyup="checkSurnames()" onblur="checkSurnames()" required>
                 <span class="error-message" id="surnamesError"></span>
@@ -64,9 +60,7 @@
 
         <div class="formRow">
             <div class="inputData">
-                <label for="name">Correo (
-                    <span id="emailLength"></span>/
-                    <span id="maxEmailLength"></span>):
+                <label for="name">Correo (<span id="emailLength"></span>/<span id="maxEmailLength"></span>):
                 </label>
                 <input type="text" id="email" th:field="*{email}" onkeyup="checkEmail()" onblur="checkEmail()" required>
                 <span class="error-message" id="emailError"></span>
@@ -89,7 +83,7 @@
 
         <div class="formRow">
             <div class="buttonsDiv">
-                <input type="submit" id="submitBtn" class="buttons">
+                <input type="submit" id="submitBtn" class="buttons" value="Enviar">
             </div>
             <div class="buttonsDiv">
                 <input type="reset" id="resetBtn" class="buttons">
