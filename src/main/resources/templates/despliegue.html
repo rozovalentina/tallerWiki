@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wiki del Equipo</title>
-    <link rel="stylesheet" href="css/home.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Despliegue</title>
+    <link rel="stylesheet" href="/css/home.css">
 </head>
 <body>
     <header>
@@ -26,28 +25,21 @@
                 <a href="/despliegue">Despliegue</a>
             </div>
         </div>
-        <div class="nav-element" id="nav-selected">
-            <a href="" >Portada</a>
-        </div>
         <div class="nav-element">
-            <a href="/controllers/contact">Contáctenos</a>
+            <a href="/index" >Portada</a>
+        </div>
+        <div class="nav-element" id="nav-selected">
+            <a href="@{/arquitectura}">Contáctenos</a>
         </div>
     </nav>
-    
     <main>
         <section>
-            <h2>Acerca de la Wiki</h2>
-            <p>En esta wiki se encuentra toda la información relevante del equipo (nombre) y el proyecto (nombrex2) 
-                incluido sus requerimientos, diseño, implementación, testeo y despliegue</p>
+            <h2>Despliegue de la Aplicación</h2>
+            <p>Detalles sobre el despliegue de la aplicación...</p>
         </section>
-        <section>
-            <h2>Presentación del Equipo</h2>
-
-        </section>
-        
     </main>
     <footer>
-        <p>Wiki del Equipo - Desarrollo Web 2430</p>
+        <p>&copy; 2024 Wiki del Equipo</p>
     </footer>
 </body>
 </html>
